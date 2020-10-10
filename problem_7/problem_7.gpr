@@ -1,0 +1,19 @@
+project Problem_7 is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Main use ("main.adb");
+
+   package Compiler is
+      for Switches ("ada") use ("-O3", "-gnatn", "-funroll-loops", "-gnat12");
+   end Compiler;
+
+   package Builder is
+   end Builder;
+
+   package Linker is
+      for Switches ("ada") use ("-g");
+   end Linker;
+
+end Problem_7;
+
